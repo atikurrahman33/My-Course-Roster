@@ -2,7 +2,7 @@
     {
       "id": 1,
       "image": "https://i.ibb.co/7JNQVt8/1.jpg",
-      "curseName": "Introduction to Programming",
+      "curseName": "Learning Programming",
       "details": "A beginner's guide to programming concepts.",
       "price": 49.99,
       "credit": 3
@@ -35,7 +35,7 @@
       "id": 5,
       "image": "https://i.ibb.co/jG3m5Ks/5.jpg",
       "curseName": "Advanced JavaScript",
-      "details": "Take your JavaScript skills to the next level.",
+      "details": "Take your JavaScript skills to the next level and work...",
       "price": 89.99,
       "credit": 3
     },
@@ -59,14 +59,14 @@
       "id": 8,
       "image": "https://i.ibb.co/Gsm65M6/8.jpg",
       "curseName": "iOS App Development",
-      "details": "Build your own iOS apps from scratch.",
+      "details": "Build your own iOS apps from scratch and other .",
       "price": 79.99,
       "credit": 4
     },
     {
       "id": 9,
       "image": "https://i.ibb.co/K9D2xhN/9.jpg",
-      "curseName": "Introduction to Cybersecurity",
+      "curseName": "Cybersecurity",
       "details": "Get started with cybersecurity fundamentals.",
       "price": 69.99,
       "credit": 3

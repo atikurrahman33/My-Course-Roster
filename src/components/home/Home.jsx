@@ -1,33 +1,52 @@
-import { useEffect } from 'react';
+/* eslint-disable react/jsx-key */
+import { useEffect ,useState } from 'react';
 
 import './Home.css'
 
+
+  
+
 const Home = () => {
+
+    const [allcurse , setAllcurse] =useState([])
 
     useEffect(()=>{
         fetch('data.json')
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then(json => setAllcurse(json))
     },[])
-    return (
+    console.log(allcurse)
+    
+    return (     
 
         
         <div className='container'>
-           <div className='card-container'>
-            <div className='card'>
+           <div className='home-container'>
+            <div className='card-container'>
+            {
+            
+            allcurse.map ((curse) =>(
+                    <div key={curse.id} className='card'>
                 <div className='card-img'>
-                    <img className='photo' src="https://i.ibb.co/7JNQVt8/1.jpg" alt="" />
+                    <img className='photo' src={curse.image} alt="" />
                      </div>
                      <div>
-                        <h2>Introduction to Programming</h2>
-                        <p>A beg guide to programming concepts.</p>
+                        <h2>{curse.curseName}</h2>
+                        <p>{curse.details}</p>
                      </div>
                      <div className='info'>
-                        <p>price: 59.99</p>
-                        <p>credit: 4</p>
+                        <p>Price: {curse.price} </p>
+                        <p>Credit: {curse.credit}</p>
                         </div>
                         <button className='card-btn'>Select</button>
 
+
+            </div>
+
+           )) }
+            </div>
+            <div className='card'>
+                <h1> this is cart</h1>
             </div>
            </div>
             
