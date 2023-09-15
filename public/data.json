@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/7JNQVt8/1.jpg",
+      "curseName": "Introduction to Programming",
+      "details": "A beginner's guide to programming concepts.",
+      "price": 49.99,
+      "credit": 3
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/XxgjJwX/2.jpg",
+      "curseName": "Web Development Fundamentals",
+      "details": "Learn the basics of web development.",
+      "price": 59.99,
+      "credit": 4
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/4jb8kG8/3.jpg",
+      "curseName": "Data Science Essentials",
+      "details": "Explore the world of data science and analytics.",
+      "price": 79.99,
+      "credit": 5
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/Z2nbvYR/4.jpg",
+      "curseName": "Graphic Design Fundamentals",
+      "details": "Master the art of graphic design.",
+      "price": 69.99,
+      "credit": 4
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/jG3m5Ks/5.jpg",
+      "curseName": "Advanced JavaScript",
+      "details": "Take your JavaScript skills to the next level.",
+      "price": 89.99,
+      "credit": 3
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/nsY91bM/6.jpg",
+      "curseName": "Machine Learning Basics",
+      "details": "An introduction to machine learning concepts.",
+      "price": 99.99,
+      "credit": 5
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co/bQPvts3/7.jpg",
+      "curseName": "Digital Marketing Fundamentals",
+      "details": "Learn the essentials of digital marketing.",
+      "price": 59.99,
+      "credit": 4
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co/Gsm65M6/8.jpg",
+      "curseName": "iOS App Development",
+      "details": "Build your own iOS apps from scratch.",
+      "price": 79.99,
+      "credit": 4
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co/K9D2xhN/9.jpg",
+      "curseName": "Introduction to Cybersecurity",
+      "details": "Get started with cybersecurity fundamentals.",
+      "price": 69.99,
+      "credit": 3
+    }
+  ]
+  
