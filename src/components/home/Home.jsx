@@ -1,6 +1,9 @@
 /* eslint-disable react/jsx-key */
 import { useEffect ,useState } from 'react';
 import Cart from "../cart/Cart"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import './Home.css'
 
@@ -12,7 +15,7 @@ const Home = () => {
     const [allcurse , setAllcurse] =useState([])
     const [selectedCurse , setselectedcurse]=useState([])
     const [Remaining , setRemaining]=useState(20);
-    const [totalcost , setTotalCost]=useState(0);
+    const [totalCredit, setTotalCost]=useState(0);
 
     useEffect(()=>{
         fetch('data.json')
@@ -26,13 +29,18 @@ const Home = () => {
 
         let count =curse.credit;
         if(isExist){
-           return alert('Already this curse are add here')
+           return toast('Already this curse are add here')
         }
         else{
             selectedCurse.forEach(item=>{
                 count=count+item.credit
             })
             const Credit_Hour_Remaining =20-count;
+           
+            if(totalCredit>=20){
+               return toast('Maximum credit taken')
+            }
+           
             setTotalCost(count);
             setRemaining(Credit_Hour_Remaining)
             setselectedcurse([...selectedCurse, curse])
@@ -70,7 +78,8 @@ const Home = () => {
            )) }
             </div>
             <div className='card'>
-             <Cart Remaining={Remaining} selectedCurse={selectedCurse} totalcost={totalcost} ></Cart>
+             <Cart Remaining={Remaining} selectedCurse={selectedCurse} totalCredit={totalCredit} ></Cart>
+             <ToastContainer />
             </div>
            </div>
             

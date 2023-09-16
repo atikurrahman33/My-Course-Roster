@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import './Cart.css'
 
-const Cart = ({selectedCurse, Remaining ,totalcost}) => {
+const Cart = ({selectedCurse, Remaining ,totalCredit}) => {
     console.log(selectedCurse)
     return (
         <div>
@@ -13,7 +13,7 @@ const Cart = ({selectedCurse, Remaining ,totalcost}) => {
                         
                 ))
             }
-            <h2>Total Credit Hour : {totalcost}</h2>
+            <h2>Total Credit Hour : {totalCredit}</h2>
             
         </div>
     );
