@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { useEffect ,useState } from 'react';
+import Cart from "../cart/Cart"
 
 import './Home.css'
 
@@ -9,14 +10,20 @@ import './Home.css'
 const Home = () => {
 
     const [allcurse , setAllcurse] =useState([])
+    const [selectedCurse , setselectedcurse]=useState([])
 
     useEffect(()=>{
         fetch('data.json')
       .then(response => response.json())
       .then(json => setAllcurse(json))
     },[])
-    console.log(allcurse)
     
+    
+    const handleSelectCurse =(curse) =>{
+        setselectedcurse([...selectedCurse, curse])
+        
+    }
+    console.log(selectedCurse)
     return (     
 
         
@@ -35,10 +42,10 @@ const Home = () => {
                         <p>{curse.details}</p>
                      </div>
                      <div className='info'>
-                        <p>Price: {curse.price} </p>
+                        <p> $ Price: {curse.price} </p>
                         <p>Credit: {curse.credit}</p>
                         </div>
-                        <button className='card-btn'>Select</button>
+                        <button onClick={()=> handleSelectCurse(curse)} className='card-btn'>Select</button>
 
 
             </div>
@@ -46,7 +53,7 @@ const Home = () => {
            )) }
             </div>
             <div className='card'>
-                <h1> this is cart</h1>
+             <Cart selectedCurse={selectedCurse}></Cart>
             </div>
            </div>
             
