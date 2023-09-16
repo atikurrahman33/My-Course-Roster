@@ -11,6 +11,8 @@ const Home = () => {
 
     const [allcurse , setAllcurse] =useState([])
     const [selectedCurse , setselectedcurse]=useState([])
+    const [Remaining , setRemaining]=useState(20);
+    const [totalcost , setTotalCost]=useState(0);
 
     useEffect(()=>{
         fetch('data.json')
@@ -20,7 +22,22 @@ const Home = () => {
     
     
     const handleSelectCurse =(curse) =>{
-        setselectedcurse([...selectedCurse, curse])
+        const isExist =selectedCurse.find(item => item.id==curse.id);
+
+        let count =curse.credit;
+        if(isExist){
+           return alert('Already this curse are add here')
+        }
+        else{
+            selectedCurse.forEach(item=>{
+                count=count+item.credit
+            })
+            const Credit_Hour_Remaining =20-count;
+            setTotalCost(count);
+            setRemaining(Credit_Hour_Remaining)
+            setselectedcurse([...selectedCurse, curse])
+         }
+        
         
     }
     console.log(selectedCurse)
@@ -45,7 +62,7 @@ const Home = () => {
                         <p> $ Price: {curse.price} </p>
                         <p>Credit: {curse.credit}</p>
                         </div>
-                        <button onClick={()=> handleSelectCurse(curse)} className='card-btn'>Select</button>
+                        <button onClick={()=> handleSelectCurse(curse)}  className='card-btn'>Select</button>
 
 
             </div>
@@ -53,7 +70,7 @@ const Home = () => {
            )) }
             </div>
             <div className='card'>
-             <Cart selectedCurse={selectedCurse}></Cart>
+             <Cart Remaining={Remaining} selectedCurse={selectedCurse} totalcost={totalcost} ></Cart>
             </div>
            </div>
             
