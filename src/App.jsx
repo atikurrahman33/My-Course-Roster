@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-    
+    <h2>Course Registration</h2>
       <Home></Home>
       
     </>
